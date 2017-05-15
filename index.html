@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <title>Лабораторная работа #1</title>
+  </head>
+  <body>
+    <div id="block-container">
+      <div>
+        <p class="center">Исходные данные</p>
+        <select id="tod" size="32" multiple>
+        </select>
+      </div>
+      <div>
+        <p class="center">Исходный файл</p>
+        <input type="button" id="btn-readfile" value="Выбрать файл" />
+        <p id="filename"></p>
+        <p class="center margin-top">Поиск идентификатора</p>
+        <input type="text" id="search-id">
+        <input type="button" id="btn-search-id" value="Поиск" />
+        <input type="button" id="btn-reset" value="Сброс" /> <br />
+        <br>
+        <p class="inline">Всего поисков</p>
+        <p class="inline" id="counter">0</p>
+        <p class="inline"> раз</p> <br />
+        <br>
+        <input type="button" id="" value="Найти все" />
+      </div>
+      <div>
+        <p class="center">Простой список</p>
+        <p>Идентификатор <span id="found-id">НЕ</span> найден</p>
+        <p>Сравнений: <span id="compare">0</span></p>
+        <p>Всего сравнений: <span id="totalCompare">0</span></p>
+        <p>В среднем сравнений: 0,00</p>
+      </div>
+      <div>
+        <p class="center">Рехэширование с ПП</p>
+        <p>Идентификатор (не) найден</p>
+        <p>Сравнений: 0</p>
+        <p>Всего сравнений: 0</p>
+        <p>В среднем сравнений: 0,00</p>
+      </div>
+    </div>
+  </body>
+
+  <script src="reset.js"></script>
+  <script src="dialog.js"></script>
+  <script src="global.js"></script>
+  <script src="search-method.js"></script>
+
+  <script>
+  </script>
+</html>
