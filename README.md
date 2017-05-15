@@ -9,6 +9,6 @@
   
 ***
 
-### Запуск
-
+## Запуск
+`npm run build`
 `npm run start`
