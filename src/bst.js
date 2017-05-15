@@ -1,41 +1,3 @@
-const unordered = () => {
-
-  let compare = 0;
-
-  const current = document.getElementById("search-id").value;
-
-  if (current === "") {
-
-    dialog.showMessageBox({
-      type: 'error',
-      message: 'Введите искомое значение',
-      buttons: ['OK']
-    });
-    return;
-
-  }
-
-  counter++;
-  document.getElementById("counter").innerHTML = counter;
-
-  for (let i = 0; i < list.length; i++) {
-
-    compare++;
-    totalCompare++;
-
-    document.getElementById('compare').innerHTML = compare;
-    document.getElementById('totalCompare').innerHTML = totalCompare;
-    document.getElementById('found-id').innerHTML = "НЕ";
-
-    if (current === list[i]) {
-      document.getElementById('found-id').innerHTML = "";
-      return;
-    }
-
-  }
-
-}
-
 function BinarySearchTree() {
   this.root = null;
 }
@@ -90,9 +52,3 @@ BinarySearchTree.prototype.contains = function (val) {
     };
     return traverse(node);
 };
-
-document.getElementById("btn-readfile").addEventListener("click", fileOpen, false);
-document.getElementById("btn-reset").addEventListener("click", reset, false);
-document.getElementById("btn-search-id").addEventListener("click", function() {
-  unordered();
-}, false);

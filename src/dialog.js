@@ -1,8 +1,5 @@
-const fs = require('fs')
-const path = require('path')
-const {dialog} = require('electron').remote
-
-//const global = require('./global.js');
+import * as message from './message-box';
+import * as global from './global';
 
 const fileOpen = () => {
 
@@ -18,8 +15,9 @@ const fileOpen = () => {
     fs.readFile(identifiers[0], "utf-8", (err, data) => {
 
       if (err) throw err;
-      list = data.toString().split('\n');
+      global.list = data.toString().split('\n');
 
+      /*
       var BST = new BinarySearchTree();
 
       for (let i = 0; i < list.length; i++) {
@@ -27,23 +25,20 @@ const fileOpen = () => {
       }
 
       console.log(BST);
+      */
 
       select = document.getElementById("tod");
 
-      for (index in list) {
-        select.options[select.options.length] = new Option(list[index], index);
+      for (index in global.list) {
+        select.options[select.options.length] = new Option(global.list[index], index);
       }
 
-      dialog.showMessageBox({
-
-        type: 'info',
-        message: 'Считано ' + list.length + ' идентификаторов',
-        buttons: ['OK']
-
-      });
+      message.identifiersLength();
 
     });
 
   });
 
 }
+
+export default fileOpen;
