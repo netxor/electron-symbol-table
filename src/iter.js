@@ -8,14 +8,12 @@ const iter = () => {
   const current = document.getElementById("search-id").value;
 
   if (current === "") {
-
     message.inputToFind();
     return;
-
   }
 
   global.counter++;
-  document.getElementById("counter").innerHTML = counter;
+  document.getElementById("counter").innerHTML = global.counter;
 
   for (let i = 0; i < global.list.length; i++) {
 

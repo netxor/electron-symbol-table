@@ -27,9 +27,10 @@ const fileOpen = () => {
       console.log(BST);
       */
 
-      select = document.getElementById("tod");
 
-      for (index in global.list) {
+      const select = document.getElementById("tod");
+
+      for (const index in global.list) {
         select.options[select.options.length] = new Option(global.list[index], index);
       }
 

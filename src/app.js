@@ -2,9 +2,9 @@ const fs = require('fs')
 const path = require('path')
 const {dialog} = require('electron').remote
 
-import iter from './iter';
-import fileOpen from './dialog';
-import reset from './reset';
+import iter from './dist/iter';
+import fileOpen from './dist/dialog';
+import reset from './dist/reset';
 
 document.getElementById("btn-readfile").addEventListener("click", fileOpen, false);
 document.getElementById("btn-reset").addEventListener("click", reset, false);
